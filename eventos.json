@@ -1,0 +1,162 @@
+{
+  "sprintGoal": "Entregar o módulo de checkout e pagamentos até sexta-feira",
+  "tarefasIniciais": 5,
+  "moralInicial": 100,
+  "dias": [
+    {
+      "dia": 1,
+      "titulo": "Dia 1 — Sprint Planning",
+      "evento": "O Product Owner trouxe 8 funcionalidades grandes, mas o time estima que só consegue entregar 5 com qualidade nesta semana. Como você facilita?",
+      "opcoes": [
+        {
+          "texto": "Apoiar a estimativa do time e negociar com o PO as 5 tarefas prioritárias para a meta.",
+          "acertou": true,
+          "impactoMoral": 5,
+          "tarefasConcluidas": 1,
+          "pontos": 100,
+          "feedback": "Acerto! Segundo o Guia Scrum, os Developers definem quanto trabalho conseguem assumir na Sprint com base na sua capacidade real."
+        },
+        {
+          "texto": "Aceitar as 8 tarefas para agradar o PO e pedir para o time correr.",
+          "acertou": false,
+          "impactoMoral": -20,
+          "tarefasConcluidas": 0,
+          "pontos": 0,
+          "feedback": "Erro! Assumir escopo acima da capacidade gera sobrecarga, queda de qualidade e compromete a meta da Sprint."
+        },
+        {
+          "texto": "Escolher você mesmo quais 5 tarefas o time vai fazer sem consultar ninguém.",
+          "acertou": false,
+          "impactoMoral": -15,
+          "tarefasConcluidas": 1,
+          "pontos": 20,
+          "feedback": "Erro! O Scrum Master não manda no time; o time é autogerenciável e o PO prioriza o valor de negócio."
+        }
+      ]
+    },
+    {
+      "dia": 2,
+      "titulo": "Dia 2 — Daily Scrum",
+      "evento": "Na Daily de 15 minutos, dois desenvolvedores começam uma discussão técnica profunda sobre arquitetura de banco de dados, passando de 25 minutos de reunião.",
+      "opcoes": [
+        {
+          "texto": "Intervir com educação, encerrar a Daily no tempo e marcar uma conversa separada só entre os interessados.",
+          "acertou": true,
+          "impactoMoral": 5,
+          "tarefasConcluidas": 1,
+          "pontos": 100,
+          "feedback": "Acerto! A Daily Scrum tem time-box de 15 minutos para alinhar o plano do dia. Discussões detalhadas devem ocorrer após a reunião."
+        },
+        {
+          "texto": "Deixar a discussão rolar por 1 hora com todo o time assistindo até resolverem.",
+          "acertou": false,
+          "impactoMoral": -15,
+          "tarefasConcluidas": 0,
+          "pontos": 0,
+          "feedback": "Erro! Desrespeitar o time-box da Daily desperdiça tempo produtivo dos demais membros do time."
+        },
+        {
+          "texto": "Cancelar as próximas Dailys da semana para o time não perder tempo conversando.",
+          "acertou": false,
+          "impactoMoral": -10,
+          "tarefasConcluidas": 0,
+          "pontos": 0,
+          "feedback": "Erro! Eliminar a inspeção diária impede a detecção rápida de impedimentos."
+        }
+      ]
+    },
+    {
+      "dia": 3,
+      "titulo": "Dia 3 — Mudança de Escopo",
+      "evento": "No meio da Sprint, um stakeholder aparece pedindo para adicionar um relatório urgente que não estava no Sprint Backlog.",
+      "opcoes": [
+        {
+          "texto": "Proteger o time, recusar a inclusão imediata e orientar o stakeholder a falar com o PO para priorizar na próxima Sprint.",
+          "acertou": true,
+          "impactoMoral": 10,
+          "tarefasConcluidas": 1,
+          "pontos": 100,
+          "feedback": "Acerto! Mudanças que colocam a meta da Sprint em risco não devem ser inseridas no meio do ciclo."
+        },
+        {
+          "texto": "Adicionar o relatório na hora e exigir hora extra do time.",
+          "acertou": false,
+          "impactoMoral": -30,
+          "tarefasConcluidas": 0,
+          "pontos": 0,
+          "feedback": "Erro! Alterar o escopo sem negociação destrói a previsibilidade e derruba a moral da equipe."
+        },
+        {
+          "texto": "Pedir para um desenvolvedor fazer escondido sem avisar o Product Owner.",
+          "acertou": false,
+          "impactoMoral": -20,
+          "tarefasConcluidas": 0,
+          "pontos": 0,
+          "feedback": "Erro! Isso fere o pilar da Transparência do Scrum e desvia foco da meta acordada."
+        }
+      ]
+    },
+    {
+      "dia": 4,
+      "titulo": "Dia 4 — Impedimento Técnico",
+      "evento": "O ambiente de homologação caiu e o time está bloqueado sem conseguir testar a integração de pagamento.",
+      "opcoes": [
+        {
+          "texto": "Atuar imediatamente junto à equipe de infraestrutura para remover o impedimento enquanto o time adianta testes unitários.",
+          "acertou": true,
+          "impactoMoral": 5,
+          "tarefasConcluidas": 1,
+          "pontos": 100,
+          "feedback": "Acerto! Remover impedimentos que bloqueiam o progresso do time é uma das principais responsabilidades do Scrum Master."
+        },
+        {
+          "texto": "Dizer ao time para esperar o servidor voltar sozinho e ir adiantar seus relatórios.",
+          "acertou": false,
+          "impactoMoral": -20,
+          "tarefasConcluidas": 0,
+          "pontos": 0,
+          "feedback": "Erro! Deixar o time bloqueado sem agir atrasa as entregas da Sprint."
+        },
+        {
+          "texto": "Mandar o time subir o código direto em produção sem testar.",
+          "acertou": false,
+          "impactoMoral": -25,
+          "tarefasConcluidas": 0,
+          "pontos": 0,
+          "feedback": "Erro! Pular testes viola a Definition of Done (Definição de Pronto) e compromete a qualidade do incremento."
+        }
+      ]
+    },
+    {
+      "dia": 5,
+      "titulo": "Dia 5 — Sprint Review e Retrospectiva",
+      "evento": "Chegou sexta-feira. Uma tarefa ficou 80% pronta, mas ainda não passou pelos critérios de aceite. Como você conduz o encerramento?",
+      "opcoes": [
+        {
+          "texto": "Apresentar na Review apenas o que está 100% pronto, devolver o item incompleto ao Product Backlog e discutir melhorias na Retrospectiva.",
+          "acertou": true,
+          "impactoMoral": 5,
+          "tarefasConcluidas": 1,
+          "pontos": 100,
+          "feedback": "Acerto! Apenas incrementos que atendem à Definition of Done são entregues. Trabalho incompleto volta para o Backlog."
+        },
+        {
+          "texto": "Marcar a tarefa como concluída mesmo inacabada para mostrar 100% de entrega no gráfico.",
+          "acertou": false,
+          "impactoMoral": -15,
+          "tarefasConcluidas": 0,
+          "pontos": 0,
+          "feedback": "Erro! Falsificar o status viola a Transparência e gera débito técnico oculto."
+        },
+        {
+          "texto": "Pular a Sprint Retrospectiva para ganhar tempo e já começar a próxima Sprint.",
+          "acertou": false,
+          "impactoMoral": -20,
+          "tarefasConcluidas": 0,
+          "pontos": 0,
+          "feedback": "Erro! Sem a Retrospectiva, o time perde a oportunidade formal de inspecionar seu processo e melhorar."
+        }
+      ]
+    }
+  ]
+}

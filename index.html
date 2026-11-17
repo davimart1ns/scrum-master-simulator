@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scrum Master Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+
+    <!-- ==========================================
+         ESTADO 1: TELA INICIAL (MENU)
+         ========================================== -->
+    <section id="screen-menu" class="screen active">
+      <div class="card hero-card">
+        <span class="badge">SIMULADOR ÁGIL • FASE 1</span>
+        <h1>SCRUM MASTER <span>SIMULATOR</span></h1>
+        <p class="subtitle">
+          Assuma o papel de Scrum Master durante uma Sprint de 5 dias úteis. 
+          Proteja o time, remova impedimentos e tome decisões alinhadas ao Guia Scrum.
+        </p>
+
+        <div class="goal-box">
+          <h3>🎯 Meta da Sprint (Sprint Goal)</h3>
+          <p id="menu-sprint-goal">Entregar o módulo de checkout e pagamentos até sexta-feira</p>
+          <div class="initial-stats">
+            <div><strong>5</strong><span>Dias Úteis</span></div>
+            <div><strong>5</strong><span>Tarefas no Backlog</span></div>
+            <div><strong>100%</strong><span>Moral Inicial</span></div>
+          </div>
+        </div>
+
+        <button id="btn-start" class="btn btn-primary">Iniciar Sprint (Dia 1)</button>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         ESTADO 2: TELA DE GAMEPLAY (SPRINT)
+         ========================================== -->
+    <section id="screen-sprint" class="screen">
+      <!-- Painel Superior de Indicadores (HUD) -->
+      <header class="hud">
+        <div class="hud-item">
+          <span class="hud-label">Progresso</span>
+          <strong id="hud-day">Dia 1 / 5</strong>
+        </div>
+
+        <div class="hud-item moral-box">
+          <div class="moral-header">
+            <span class="hud-label">Moral da Equipe</span>
+            <strong id="hud-moral-text">100%</strong>
+          </div>
+          <div class="progress-bar">
+            <div id="hud-moral-bar" class="progress-fill" style="width: 100%;"></div>
+          </div>
+        </div>
+
+        <div class="hud-item">
+          <span class="hud-label">Entregas (Done)</span>
+          <strong id="hud-tasks">0 / 5</strong>
+        </div>
+
+        <div class="hud-item">
+          <span class="hud-label">Pontuação</span>
+          <strong id="hud-score">0 pts</strong>
+        </div>
+      </header>
+
+      <!-- Mini Quadro Kanban Visual -->
+      <div class="kanban-board">
+        <div class="kanban-col">
+          <h4>TO DO</h4>
+          <div id="kanban-todo" class="kanban-cards"></div>
+        </div>
+        <div class="kanban-col">
+          <h4>DOING</h4>
+          <div id="kanban-doing" class="kanban-cards"></div>
+        </div>
+        <div class="kanban-col">
+          <h4>DONE</h4>
+          <div id="kanban-done" class="kanban-cards"></div>
+        </div>
+      </div>
+
+      <!-- Área do Dilema Diário -->
+      <main class="card event-card">
+        <span id="event-day-badge" class="badge">DIA 1</span>
+        <h2 id="event-title">Carregando evento...</h2>
+        <p id="event-description" class="event-text"></p>
+
+        <!-- Botões das 3 Opções de Escolha -->
+        <div id="options-container" class="options-list"></div>
+
+        <!-- Caixa de Feedback Imediato (Erros e Acertos) -->
+        <div id="feedback-box" class="feedback-box hidden">
+          <div class="feedback-header">
+            <span id="feedback-status" class="status-tag">ACERTO</span>
+            <span id="feedback-delta" class="delta-tag">+100 pts | Moral +5%</span>
+          </div>
+          <p id="feedback-text"></p>
+          <button id="btn-next-day" class="btn btn-primary">Avançar para o Próximo Dia →</button>
+        </div>
+      </main>
+    </section>
+
+    <!-- ==========================================
+         ESTADO 3: TELA DE ENCERRAMENTO (RESULTADO)
+         ========================================== -->
+    <section id="screen-result" class="screen">
+      <div class="card result-card">
+        <span id="result-badge" class="badge">SPRINT ENCERRADA</span>
+        <h2 id="result-title">Sprint Bem-Sucedida!</h2>
+        <p id="result-subtitle" class="subtitle"></p>
+
+        <div class="result-grid">
+          <div class="stat-box">
+            <span>Pontuação Final</span>
+            <strong id="final-score">0 pts</strong>
+          </div>
+          <div class="stat-box">
+            <span>Moral Final</span>
+            <strong id="final-moral">100%</strong>
+          </div>
+          <div class="stat-box">
+            <span>Tarefas Entregues</span>
+            <strong id="final-tasks">5 / 5</strong>
+          </div>
+        </div>
+
+        <div class="retrospective-box">
+          <h3>📋 Resumo da Sprint Review</h3>
+          <ul id="result-history"></ul>
+        </div>
+
+        <button id="btn-restart" class="btn btn-primary">Jogar Novamente</button>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Scripts organizados na arquitetura MVC + State Pattern -->
+  <script type="module" src="js/controller.js"></script>
+</body>
+</html>
